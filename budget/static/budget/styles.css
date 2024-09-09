@@ -329,4 +329,7 @@ select {
   .grid1{
     display: block;
   }
+  .font-titles-att{
+    font-size: 18px;
+  }
 }
