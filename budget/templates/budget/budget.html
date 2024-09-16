@@ -4,7 +4,7 @@
 <div class="titles-main-center shadow">
 
     <span class="font-titles-main-center" id="total-budget">Total Budget</span>
-    <span class="amount-main-center">${{budgetSum}}</span>
+    <span class="amount-main-center">${{budgetSum|floatformat:-2}}</span>
 </div>
 <div class="grid3">
     <div>
@@ -18,10 +18,10 @@
                 <span class="vertical-separator" />
                 <span class="font-titles-main" id="{{budget.category}}">{{budget.category}}</span>
                 <div class="contenedor-flex">
-                    <span class="amount-main">${{budget.amount}}</span>
+                    <span class="amount-main">${{ budget.amount|floatformat:-2 }}</span>
                     <a href="{% url 'edit_budget' budget.id %}" class="btn btn-primary" style="margin-left:20px; margin-bottom:10px;">Edit</a>
                 </div>
-                <span style="display:none;" id="amount-{{budget.category}}">{{budget.amount}}</span>
+                <span style="display:none;" id="amount-{{budget.category}}">{{ budget.amount|floatformat:-2 }}</span>
             </div>
         {%endfor%}
     </div>

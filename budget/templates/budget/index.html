@@ -22,8 +22,8 @@
             <div class="titles-main shadow" id="{{sum.category__name}}">
                 <span class="vertical-separator" id="sep-{{sum.category__name}}" />
                 <span class="font-titles-main" id="text-{{sum.category__name}}">{{sum.category__name}}</span>
-                <span class="amount-main">${{sum.total_amount}}</span>
-                <span style="display:none;" id="amount-{{sum.category__name}}">{{sum.total_amount}}</span>
+                <span class="amount-main">${{sum.total_amount|floatformat:-2}}</span>
+                <span style="display:none;" id="amount-{{sum.category__name}}">{{sum.total_amount|floatformat:-2}}</span>
             </div>
              {%endfor%}
         </div>
