@@ -5,12 +5,12 @@
         <div class="titles-main shadow">
             <span class="vertical-separator"/>
             <span class="font-titles-main">Total Expenses</span>
-            <span class="amount-main">${{expenseSum}}</span>
+            <span class="amount-main">${{expenseSum|floatformat:-2}}</span>
         </div>
         <div class="titles-main shadow" id="remaining-div">
             <span class="vertical-separator" style="background-color:#e03a3a" id="rem-sep"/>
             <span class="font-titles-main" id="remaining-text">Remaining Budget</span>
-            <span class="amount-main">$<span id="remaining-budget">{{remainingBudget}}<span></span>
+            <span class="amount-main">$<span id="remaining-budget">{{remainingBudget|floatformat:-2}}<span></span>
         </div>
     </div>
     <div class="grid3">
